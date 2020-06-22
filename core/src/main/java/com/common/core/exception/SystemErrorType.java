@@ -5,6 +5,7 @@ import lombok.Getter;
 @Getter
 public enum SystemErrorType implements ErrorType {
 
+    //00开头的是系统错误，01开头的是A系统错误，02开头的是B系统错误
     SYSTEM_ERROR("-1", "系统异常"),
     SYSTEM_BUSY("000001", "系统繁忙,请稍候再试"),
 
@@ -25,10 +26,15 @@ public enum SystemErrorType implements ErrorType {
     /**
      * 错误类型描述信息
      */
-    private String mesg;
+    private String msg;
 
-    SystemErrorType(String code, String mesg) {
+    SystemErrorType(String code, String msg) {
         this.code = code;
-        this.mesg = mesg;
+        this.msg = msg;
+    }
+
+    @Override
+    public String getMsg() {
+        return null;
     }
 }
