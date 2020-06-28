@@ -74,5 +74,4 @@ public class PrivateHelper {
         return ReflectionUtils.invokeMethod(method, instance, args);
     }
 
-
 }
