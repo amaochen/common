@@ -15,6 +15,8 @@
         <module>core</module>
         <module>web</module>
         <module>test</module>
+        <module>dal</module>
+        <module>biz</module>
     </modules>
 
     <dependencies>
