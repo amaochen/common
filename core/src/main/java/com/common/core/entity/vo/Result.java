@@ -33,7 +33,7 @@ public class Result<T> {
     /**
      * @param errorType
      */
-    public Result(ErrorType errorType) {
+    Result(ErrorType errorType) {
         this.code = errorType.getCode();
         this.msg = errorType.getMsg();
         this.time = ZonedDateTime.now().toInstant();
@@ -43,7 +43,7 @@ public class Result<T> {
      * @param errorType
      * @param data
      */
-    public Result(ErrorType errorType, T data) {
+    Result(ErrorType errorType, T data) {
         this(errorType);
         this.data = data;
     }
